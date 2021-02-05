@@ -4,6 +4,8 @@ agent:
   machine:
     type: e1-standard-8
     os_image: ubuntu1804
+execution_time_limit:
+  hours: 24
 blocks:
   - name: Test
     task:
@@ -17,6 +19,3 @@ blocks:
             - cache store
             - npm run build --if-present
             - npm test
-  - name: 'Block #2'
-    task:
-      jobs: []
